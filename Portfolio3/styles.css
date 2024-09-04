@@ -1,0 +1,181 @@
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+    background-color: transparent;
+    transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+    height: 50px;
+}
+
+.navbar.scrolled {
+    background-color: rgba(52, 58, 64, 0.8) !important; /* Slightly transparent for the blur to show through */
+    backdrop-filter: blur(5px); /* Apply the blur effect */
+}
+
+.navbar-logo {
+    height: 45px;
+    transition: height 0.3s ease;
+    margin: 0px 0px 0px 50px;
+}
+
+.nav-link {
+    color: #38b6ff;
+    transition: color 0.3s ease;
+    font-size: medium;
+    font-weight: 900;
+}
+
+.nav-link:hover {
+    color: #007bff;
+}
+
+
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: #343a40; /* Remove gradient for mobile view */
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.hero-section .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-section h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 5px rgba(211, 210, 210, 0.1);
+    color: #38b6ff;
+}
+
+.hero-section p {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+
+.hero-section img {
+    max-width: 80%;
+    height: auto;
+    filter: drop-shadow(0 0 10px rgba(56, 182, 255, 0.7)) 
+            drop-shadow(0 0 20px rgba(56, 182, 255, 0.5)) 
+            drop-shadow(0 0 30px rgba(56, 182, 255, 0.3)) 
+            drop-shadow(0 0 40px rgba(56, 182, 255, 0.1));
+    transition: filter 0.3s ease;
+    margin: 0px 0px 0px 60px;
+}
+
+.hero-section img:hover {
+    filter: drop-shadow(0 0 20px rgba(56, 182, 255, 1)) 
+            drop-shadow(0 0 40px rgba(56, 182, 255, 0.8)) 
+            drop-shadow(0 0 60px rgba(56, 182, 255, 0.6)) 
+            drop-shadow(0 0 80px rgba(56, 182, 255, 0.4));
+}
+
+
+
+@media (max-width: 768px) {
+    .hero-section {
+        background: #343a40; /* Remove gradient for mobile view */
+    }
+
+    .hero-section .col-md-6:first-child {
+        text-align: center;
+    }
+
+    .hero-section .col-md-6:last-child {
+        margin-top: 20px;
+    }
+}
+
+
+/* About Section */
+.about-section img {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+}
+
+.about-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+/* Portfolio Section */
+.portfolio-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.card {
+    border: none;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+.contact-section h2 {
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+
+.contact-section form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+}
+
+footer a {
+    color: #007bff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-section p {
+        font-size: 1.2rem;
+    }
+
+    .about-section img {
+        margin: 0 auto;
+    }
+}
